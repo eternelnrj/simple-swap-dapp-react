@@ -9,11 +9,8 @@ const config = require("./.config.json");
 ReactDOM.render(
   <React.StrictMode>
     <MoralisProvider serverUrl={config["serverUrl"]} appId={config["appId"]}>
-    <App/> 
-    
+      <App/>
     </MoralisProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
-
-//

@@ -15,18 +15,9 @@ async function approve(amountBigNumberWithDecimalsStr, spenderAddress, contractA
   
     return await Moralis.executeFunction(writeOptionsApproval);
   }
-  
-async function approve_and_wait(amountBigNumberWithDecimalsStr, spenderAddress, contractAddress, abi) {
-  console.log("inside approve: " + amountBigNumberWithDecimalsStr);
-  const tx = await approve(amountBigNumberWithDecimalsStr, spenderAddress, contractAddress, abi);
-  await tx.wait(1);
-
-}
 
 function getBigNumberWithDecimals(x, numberDecimals) {
-    console.log("before to fixed: " + x);
     x = parseFloat(x).toFixed(numberDecimals);
-    console.log("after to fixed: " + x);
 
     let xAsBigNumber = new BigNumber(x.toString());
     let yAsBigNumberWithDecimals = new BigNumber("1".concat("0".repeat(numberDecimals) ));
@@ -55,8 +46,8 @@ async function getTotalAvailableUsdcBigNumberWithDecimals() {
   };
 
   const totalAvailableUSDC = await Moralis.executeFunction(readOptionsTotalAvailableUSDC);
-
   const totalAvailableUSDCBigNumber = new BigNumber(totalAvailableUSDC.toString());
+  
   return totalAvailableUSDCBigNumber;
 }
   
@@ -73,5 +64,5 @@ async function getTotalAmountLpTokensBigNumberWithDecimals() {
     return totalAmountLpTokensBigNumber;
 }
 
-  export {approve, approve_and_wait,  getBigNumberWithDecimals, getTotalAvailableLinkBigNumberWithDecimals, getTotalAvailableUsdcBigNumberWithDecimals,
+  export {approve, getBigNumberWithDecimals, getTotalAvailableLinkBigNumberWithDecimals, getTotalAvailableUsdcBigNumberWithDecimals,
      getTotalAmountLpTokensBigNumberWithDecimals};

@@ -1,9 +1,9 @@
 const simpleSwapInfo = {
-    "contractAddress" : "0x5fB96EBCf0190F6c2bDa4A383c88639e62C815a3",
-    "abi" : require("./0x5fB96EBCf0190F6c2bDa4A383c88639e62C815a3.json")["abi"]
+    "contractAddress" : "0xD1cF252059Eb6d5AfA46224D4841764bC10E790a",
+    "abi" : require("./0xD1cF252059Eb6d5AfA46224D4841764bC10E790a.json")["abi"]
 }
 
-const lpSimpleSwapInfo = { contractAddress : "0xDc93c3C023369CD773CF7007e4587C8eb597D2Ce",
+const lpSimpleSwapInfo = { contractAddress : "0x2Fb9c80b4f37e3ed8CfF3E9F97fB6f765F5eA6B1",
                     abi : require("./IERC20.json")["abi"]};
 
 const usdcInfo = { contractAddress : "0xb7a4F3E9097C08dA09517b5aB877F7a917224ede",

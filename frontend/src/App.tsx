@@ -1,19 +1,14 @@
-import MainPage from "./pages/main_page";
-import SecondPage from "./pages/second_page";
+import SwapPage from "./pages/main_page";
+import LiquidityPage from "./pages/second_page";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MainPage/>}/>
-        <Route path="/liquidity_page" element={<SecondPage/>} />
-
-
-      
+        <Route path="/" element={<SwapPage/>}/>
+        <Route path="/liquidity_page" element={<LiquidityPage/>} />      
       </Routes>
-
     </BrowserRouter>
   );
 }

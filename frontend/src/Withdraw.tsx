@@ -2,7 +2,7 @@ import * as React from 'react'
 import {Button, View} from 'react-native';
 import Moralis from "moralis";
 
-import {simpleSwapInfo, lpSimpleSwapInfo, usdcInfo, linkInfo} from "./contracts_and_abi.js";
+import {simpleSwapInfo, lpSimpleSwapInfo} from "./contracts_and_abi.js";
 import {approve, getBigNumberWithDecimals} from "./secondary_functions.js";
 
   
@@ -41,36 +41,26 @@ class Withdraw extends React.Component<any, any>{
         console.log(this.state);
     }
 
-
     render() {
       return <>
-        <div className='WitdrawForm'>
-      <label> Lp tokens:
-      <input 
-        type="number" 
-        name="amountLpTokens" 
-        value={this.state.amountLpTokens} 
-        onChange={this.handleChange}
-      />
-      </label>
-      <div className="withdraw-btn">
-      <View >
-      <Button title="Withdraw"  color="#02882f" onPress={this.withdraw}/>
-      </View>
-      </div>
+              <div className='WitdrawForm'>
 
+                <label> Lp tokens:
+                  <input type="number" name="amountLpTokens" value={this.state.amountLpTokens} onChange={this.handleChange}/>
+                </label>
 
-  
-    </div>
-    <View style={[{ width: "10%", margin: 0, backgroundColor: "red" }]}>
-      <Button title="show state (withdraw) in console"  color="#02882f" onPress={this.display}/>
-      </View>
+                <div className="withdraw-btn">
+                  <View >
+                    <Button title="Withdraw"  color="#02882f" onPress={this.withdraw}/>
+                  </View>
+                </div>
 
+              </div>
+                <View style={[{ width: "10%", margin: 0, backgroundColor: "red" }]}>
+                  <Button title="show state (withdraw) in console"  color="#02882f" onPress={this.display}/>
+                </View>
         </>
     }
-
-
-
   }
   
 
