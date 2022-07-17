@@ -100,12 +100,7 @@ class Supply extends React.Component<any, any>{
                 </View>
               </div>
         
-              <div className="showSupply-btn">
-                <View >
-                  <Button title="show state (supply) in console"  color="#02882f" onPress={this.display}/>
-                </View>
-              </div>
-
+  
         </>
     }
 

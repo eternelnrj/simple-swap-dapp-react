@@ -175,9 +175,6 @@ class Swap extends React.Component<any, any>{
                 <Button title="Swap"  color="#02882f" onPress={this.swap}/>
               </div> 
 
-              <View style={[{ width: "10%", margin: 0, backgroundColor: "red" }]}>
-                <Button title="show state in console"  color="#02882f" onPress={this.display}/>
-              </View>
                   
               <div className="Min-amount-received"> 
                   Minimum amount received: {this.state.minAmountReceived}

@@ -170,5 +170,3 @@ contract SimpleSwap is Ownable{
         return (totalAvailableLink.mul(10 ** 6).div(totalLpTokens), totalAvailableUSDC.mul(10 ** 6).div(totalLpTokens));
     }
 }
-
-

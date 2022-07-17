@@ -56,9 +56,7 @@ class Withdraw extends React.Component<any, any>{
                 </div>
 
               </div>
-                <View style={[{ width: "10%", margin: 0, backgroundColor: "red" }]}>
-                  <Button title="show state (withdraw) in console"  color="#02882f" onPress={this.display}/>
-                </View>
+
         </>
     }
   }
